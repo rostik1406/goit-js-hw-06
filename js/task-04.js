@@ -14,9 +14,9 @@ const CounterPlugin = function ({
 CounterPlugin.prototype._getRefs = function (rootSelector) {
   const refs = {};
   refs.container = document.querySelector(rootSelector);
-  refs.incrementBtn = refs.container.querySelector("[data-decrement]");
-  refs.decrementBtn = refs.container.querySelector("[data-increment]");
-  refs.value = refs.container.querySelector("[data-value]");
+  refs.incrementBtn = refs.container.querySelector('[data-action="decrement"]');
+  refs.decrementBtn = refs.container.querySelector('[data-action="increment"]');
+  refs.value = refs.container.querySelector("#value");
   return refs;
 };
 
@@ -47,5 +47,3 @@ CounterPlugin.prototype.decrement = function () {
 };
 
 new CounterPlugin({ rootSelector: "#counter", step: 1 });
-
-// new CounterPlugin({ rootSelector: "#counter-2", step: 1 });
