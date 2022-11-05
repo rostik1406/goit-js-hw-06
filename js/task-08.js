@@ -13,10 +13,10 @@ function onLoginFormSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value && password.value) {
+  if (email.value.trim() && password.value.trim()) {
     const data = {
-      email: email.value,
-      password: password.value,
+      email: email.value.trim(),
+      password: password.value.trim(),
     };
 
     console.log(data);
