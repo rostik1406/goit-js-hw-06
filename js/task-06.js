@@ -6,7 +6,7 @@
 
 // Якщо введена правильна кількість символів,
 // то border інпуту стає зеленим, якщо неправильна кількість - червоним.
-// 
+//
 
 const validationInputRef = document.querySelector("#validation-input");
 
