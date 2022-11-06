@@ -13,9 +13,9 @@ function onLoginFormSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value.trim() && password.value.trim()) {
+  if (email.value || password.value.trim()) {
     const data = {
-      email: email.value.trim(),
+      email: email.value,
       password: password.value.trim(),
     };
 
