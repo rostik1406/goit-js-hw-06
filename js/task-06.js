@@ -20,27 +20,7 @@ validationInputRef.addEventListener("blur", (event) => {
     +validationInputRef.getAttribute("data-length")
   ) {
     validationInputRef.classList.add("valid");
-  } else if (
-    event.target.value.length !==
-    +validationInputRef.getAttribute("data-length")
-  ) {
+  } else {
     validationInputRef.classList.add("invalid");
   }
 });
-
-// if (
-//   event.target.value.length ===
-//   +validationInputRef.getAttribute("data-length")
-// ) {
-//   validationInputRef.classList.add("valid");
-//   if (validationInputRef.classList.contains("invalid")) {
-//     validationInputRef.classList.remove("invalid");
-//   }
-// } else {
-//   if (validationInputRef.classList.contains("valid")) {
-//     validationInputRef.classList.remove("valid");
-//   }
-//   validationInputRef.classList.add("invalid");
-// }
-//
-//
